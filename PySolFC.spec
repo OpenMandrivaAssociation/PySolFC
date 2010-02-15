@@ -1,7 +1,7 @@
 %define name PySolFC
 %define version 2.0
 %define unmangled_version 2.0
-%define release %mkrel 1
+%define release %mkrel 2
 
 Summary: A Python solitaire game collection
 Name: %{name}
@@ -15,6 +15,7 @@ Prefix: %{_prefix}
 BuildArch: noarch
 Vendor: Skomoroh <skomoroh@gmail.com>
 Url: http://pysolfc.sourceforge.net/
+Obsoletes: pysol
 
 %description
 PySolFC is a collection of more than 1000 solitaire card games.
