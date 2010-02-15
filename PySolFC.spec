@@ -1,7 +1,7 @@
 %define name PySolFC
 %define version 2.0
 %define unmangled_version 2.0
-%define release %mkrel 2
+%define release %mkrel 3
 
 Summary: A Python solitaire game collection
 Name: %{name}
@@ -9,11 +9,10 @@ Version: %{version}
 Release: %{release}
 Source0: %{name}-%{unmangled_version}.tar.bz2
 License: GPLv3+
-Group: Amusements/Games
+Group: Games/Cards
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Prefix: %{_prefix}
 BuildArch: noarch
-Vendor: Skomoroh <skomoroh@gmail.com>
 Url: http://pysolfc.sourceforge.net/
 Obsoletes: pysol
 
