@@ -1,7 +1,7 @@
 %define name PySolFC
 %define version 2.0
 %define unmangled_version 2.0
-%define release %mkrel 4
+%define release %mkrel 5
 
 Summary: A Python solitaire game collection
 Name: %{name}
@@ -34,21 +34,25 @@ python setup.py build
 
 %install
 rm -rf %buildroot
-python setup.py install --root=%buildroot --record=INSTALLED_FILES
+python setup.py install --root=%buildroot
 
 # Hack to put /usr/bin/pysol.py as /usr/games pysol
 mkdir -p %{buildroot}/%{_gamesbindir}
 %define pysol_bin_path %{_gamesbindir}/pysol
 %define pysol_orig_path %{_bindir}/pysol.py
 mv %{buildroot}/%{pysol_orig_path} %{buildroot}/%{pysol_bin_path}
-perl -lpi -e 'BEGIN { $src = shift(@ARGV); $dest = shift(@ARGV); } $_=$dest if $_ eq $src' %{pysol_orig_path} %{pysol_bin_path} INSTALLED_FILES
+
+%find_lang pysol
 
 %clean
 rm -rf %buildroot
 
-%files -f INSTALLED_FILES
-
+%files -f pysol.lang
 %defattr(-,root,root)
 %doc COPYING README
-
-
+%_gamesbindir/*
+%py_puresitedir/*
+%_datadir/%name
+%_datadir/applications/pysol.desktop
+%_iconsdir/*.png
+%_datadir/pixmaps/*
