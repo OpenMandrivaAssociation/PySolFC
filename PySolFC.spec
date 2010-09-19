@@ -1,7 +1,7 @@
 %define name PySolFC
 %define version 2.0
 %define unmangled_version 2.0
-%define release %mkrel 6
+%define release %mkrel 7
 
 Summary: A Python solitaire game collection
 Name: %{name}
@@ -15,8 +15,8 @@ Prefix: %{_prefix}
 BuildArch: noarch
 Url: http://pysolfc.sourceforge.net/
 Obsoletes: pysol
-BuildRequires:  python-devel
-BuildRequires:  python-setuptools
+BuildRequires: python-devel
+BuildRequires: python-setuptools
 Requires: tkinter
 Requires: python-imaging
 
@@ -26,7 +26,6 @@ Its features include modern look and feel (uses Tile widget set), multiple
 card-sets and tableau backgrounds, sound, unlimited undo, player statistics,
 a hint system, demo games, a solitaire wizard, support for user written
 plug-ins, an integrated HTML help browser, and lots of documentation.
-
 
 %prep
 %setup -n %{name}-%{unmangled_version} -q
@@ -43,6 +42,8 @@ mkdir -p %{buildroot}/%{_gamesbindir}
 %define pysol_bin_path %{_gamesbindir}/pysol
 %define pysol_orig_path %{_bindir}/pysol.py
 mv %{buildroot}/%{pysol_orig_path} %{buildroot}/%{pysol_bin_path}
+
+sed -i -e 's#Exec=.*#Exec=%{_gamesbindir}/pysol#' %{buildroot}%_datadir/applications/pysol.desktop
 
 %find_lang pysol
 
