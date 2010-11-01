@@ -1,7 +1,7 @@
 %define name PySolFC
 %define version 2.0
 %define unmangled_version 2.0
-%define release %mkrel 7
+%define release %mkrel 8
 
 Summary: A Python solitaire game collection
 Name: %{name}
@@ -19,6 +19,7 @@ BuildRequires: python-devel
 BuildRequires: python-setuptools
 Requires: tkinter
 Requires: python-imaging
+Suggests: PySolFC-cardsets
 
 %description
 PySolFC is a collection of more than 1000 solitaire card games.
