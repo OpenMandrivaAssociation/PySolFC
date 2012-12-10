@@ -61,3 +61,39 @@ rm -rf %buildroot
 %_datadir/applications/pysol.desktop
 %_iconsdir/*.png
 %_datadir/pixmaps/*
+
+
+%changelog
+* Sun Dec 19 2010 Shlomi Fish <shlomif@mandriva.org> 2.0-9mdv2011.0
++ Revision: 623151
+- Now suggesting freecell-solver
+
+* Mon Nov 01 2010 Shlomi Fish <shlomif@mandriva.org> 2.0-8mdv2011.0
++ Revision: 591520
+- New release for new python and also suggesting the cardsets package
+
+* Sun Sep 19 2010 Funda Wang <fwang@mandriva.org> 2.0-7mdv2011.0
++ Revision: 579772
+- fix desktop file (mdv#57687)
+
+* Fri Jul 09 2010 Shlomi Fish <shlomif@mandriva.org> 2.0-6mdv2011.0
++ Revision: 549896
+- Add missing tkiner and python-imaging dependencies
+
+* Wed May 05 2010 Funda Wang <fwang@mandriva.org> 2.0-5mdv2010.1
++ Revision: 542300
+- update file list to reflect pyc removal
+
+* Mon Feb 15 2010 Shlomi Fish <shlomif@mandriva.org> 2.0-4mdv2010.1
++ Revision: 506356
+- Add BuildRequires on python-devel and python-setuptools
+- Fixed the Vendor field and moved to the group Games/Cards
+- Add an obsoletes field for the original (and no longer maintained) PySol
+- import PySolFC
+
+
+* Sat Dec 05 2009 Shlomi Fish <shlomif@iglu.org.il> 2.0-1mdv
++ Generated from python setup.py bdist_rpm .
++ Hack to put /usr/bin/pysol.py under /usr/games/pysol .
++ Fixed the rpmlint problems.
+
