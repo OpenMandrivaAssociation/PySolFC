@@ -3,7 +3,7 @@
 Summary:	A Python solitaire game collection
 Name:		PySolFC
 Version:	2.6.4
-Release:	1
+Release:	2
 Source0:	%{name}-%{unmangled_version}.tar.xz
 Source1:	PySolFC.rpmlintrc
 License:	GPLv3+
@@ -15,6 +15,7 @@ BuildRequires:	python-devel
 BuildRequires:	python-setuptools
 Requires:	tkinter
 Requires:	python-imaging
+Requires:	python-random2
 Suggests:	PySolFC-cardsets
 Suggests:	freecell-solver
 
