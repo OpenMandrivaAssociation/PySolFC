@@ -2,8 +2,8 @@
 
 Summary:	A Python solitaire game collection
 Name:		PySolFC
-Version:	2.0
-Release:	11
+Version:	2.6.4
+Release:	1
 Source0:	%{name}-%{unmangled_version}.tar.bz2
 Source1:	PySolFC.rpmlintrc
 License:	GPLv3+
@@ -45,7 +45,7 @@ sed -i -e 's#Exec=.*#Exec=%{_gamesbindir}/pysol#' %{buildroot}%_datadir/applicat
 %find_lang pysol
 
 %files -f pysol.lang
-%doc COPYING README
+# %doc COPYING README (What happened to README?)
 %_gamesbindir/*
 %py_puresitedir/*
 %_datadir/%name
