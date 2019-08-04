@@ -1,4 +1,4 @@
-%define unmangled_version 2.0
+%define unmangled_version 2.6.4
 
 Summary:	A Python solitaire game collection
 Name:		PySolFC
