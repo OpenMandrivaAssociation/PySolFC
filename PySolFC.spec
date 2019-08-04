@@ -4,7 +4,7 @@ Summary:	A Python solitaire game collection
 Name:		PySolFC
 Version:	2.6.4
 Release:	1
-Source0:	%{name}-%{unmangled_version}.tar.bz2
+Source0:	%{name}-%{unmangled_version}.tar.xz
 Source1:	PySolFC.rpmlintrc
 License:	GPLv3+
 Group:		Games/Cards
