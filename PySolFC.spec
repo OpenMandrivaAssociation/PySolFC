@@ -15,6 +15,7 @@ BuildRequires:	python-devel
 BuildRequires:	python-setuptools
 Requires:	tkinter
 Requires:	python-imaging
+Requires:	python-random2
 Suggests:	PySolFC-cardsets
 Suggests:	freecell-solver
 
