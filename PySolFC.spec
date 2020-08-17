@@ -44,10 +44,8 @@ sed -i -e 's#Exec=.*#Exec=%{_gamesbindir}/pysol#' %{buildroot}%_datadir/applicat
 %find_lang pysol
 
 %files -f pysol.lang
-# %doc COPYING README (Where did README go?)
 %_gamesbindir/*
 %py_puresitedir/*
 %_datadir/%name
 %_datadir/applications/pysol.desktop
-#_iconsdir/*.png
-#_datadir/pixmaps/*
+%{_iconsdir}/hicolor/*x*/apps/pysol.png
