@@ -1,5 +1,3 @@
-%define unmangled_version 2.10.1
-
 Summary:	A Python solitaire game collection
 Name:		PySolFC
 Version:	2.10.1
@@ -27,7 +25,7 @@ a hint system, demo games, a solitaire wizard, support for user written
 plug-ins, an integrated HTML help browser, and lots of documentation.
 
 %prep
-%setup -n %{name}-%{unmangled_version} -q
+%setup -n %{name}-%{version} -q
 
 %build
 python setup.py build
@@ -51,5 +49,5 @@ sed -i -e 's#Exec=.*#Exec=%{_gamesbindir}/pysol#' %{buildroot}%_datadir/applicat
 %py_puresitedir/*
 %_datadir/%name
 %_datadir/applications/pysol.desktop
-%_iconsdir/*.png
-%_datadir/pixmaps/*
+#_iconsdir/*.png
+#_datadir/pixmaps/*
