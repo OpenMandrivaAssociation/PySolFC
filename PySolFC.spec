@@ -1,10 +1,8 @@
-%define unmangled_version 2.6.4
-
 Summary:	A Python solitaire game collection
 Name:		PySolFC
-Version:	2.6.4
-Release:	2
-Source0:	%{name}-%{unmangled_version}.tar.xz
+Version:	2.10.1
+Release:	1
+Source0:	https://sourceforge.net/projects/pysolfc/files/PySolFC/%{name}-%{version}/%{name}-%{version}.tar.xz
 Source1:	PySolFC.rpmlintrc
 License:	GPLv3+
 Group:		Games/Cards
@@ -27,7 +25,7 @@ a hint system, demo games, a solitaire wizard, support for user written
 plug-ins, an integrated HTML help browser, and lots of documentation.
 
 %prep
-%setup -n %{name}-%{unmangled_version} -q
+%setup -n %{name}-%{version} -q
 
 %build
 python setup.py build
@@ -46,10 +44,8 @@ sed -i -e 's#Exec=.*#Exec=%{_gamesbindir}/pysol#' %{buildroot}%_datadir/applicat
 %find_lang pysol
 
 %files -f pysol.lang
-# %doc COPYING README (Where did README go?)
 %_gamesbindir/*
 %py_puresitedir/*
 %_datadir/%name
 %_datadir/applications/pysol.desktop
-%_iconsdir/*.png
-%_datadir/pixmaps/*
+%{_iconsdir}/hicolor/*x*/apps/pysol.png
