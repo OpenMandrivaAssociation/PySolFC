@@ -14,6 +14,8 @@ BuildRequires:	python-setuptools
 Requires:	tkinter
 Requires:	python-imaging
 Requires:	python-random2
+Requires: python3dist(pycotap)
+Requires: python3dist(pysol-cards)
 Suggests:	PySolFC-cardsets
 Suggests:	freecell-solver
 
